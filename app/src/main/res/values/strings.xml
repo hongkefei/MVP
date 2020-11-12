@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">测试</string>
+    <string name="reg_hint_userNema">请输入用户名</string>
+    <string name="reg_hint_passWord">请输入密码</string>
+    <string name="reg_hint_confirm_passWord">请重新输入密码确认无误</string>
+    <string name="regiest">注册</string>
+    <string name="UserNameNoNull">用户名不能为空</string>
+    <string name="PasswordNoNull">密码不能为空</string>
+    <string name="Password_Dissimilarity">两次输入得密码不一致</string>
+
+
+</resources>
