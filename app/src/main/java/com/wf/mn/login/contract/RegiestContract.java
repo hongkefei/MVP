@@ -18,6 +18,9 @@ public class RegiestContract {
         public String getPassWord();
         public String getConfirmPassWord();
         public void regiestSeccess(RegiestBean bean);
+
+        public void showErrorMessage(String errorString);
+
     }
     public interface IRegiestModel extends BaseModel {
         public <T> void getRegiestResult(String url, HashMap<String,String> hashMap, INetCallBack<T> callBack);

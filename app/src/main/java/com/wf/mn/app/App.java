@@ -1,5 +1,6 @@
 package com.wf.mn.app;
 
+import com.tencent.mmkv.MMKV;
 import com.wf.mvplibrary.app.BaseApplition;
 
 /**
@@ -8,4 +9,12 @@ import com.wf.mvplibrary.app.BaseApplition;
  */
 public class App extends BaseApplition {
 
+    public String mmkvDir;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+       mmkvDir  = MMKV.initialize(this);
+    }
 }

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.tencent.mmkv.MMKV;
 import com.wf.mn.R;
 import com.wf.mn.login.bean.RegiestBean;
 import com.wf.mn.login.contract.RegiestContract;
@@ -42,7 +43,6 @@ public class RegiestActivity extends BaseActivity<RegiestPresenter> implements R
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.reg_regbutton:
-
                 if(!TextUtils.isEmpty(getUserName())){
 
                     if (!TextUtils.isEmpty(getPassWord()) && !TextUtils.isEmpty(getConfirmPassWord())){
@@ -81,6 +81,11 @@ public class RegiestActivity extends BaseActivity<RegiestPresenter> implements R
     @Override
     public void regiestSeccess(RegiestBean bean) {
         Toast.makeText(this,"注册成功",Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showErrorMessage(String errorString) {
+        Toast.makeText(this,errorString,Toast.LENGTH_LONG).show();
     }
 
 

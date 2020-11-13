@@ -17,10 +17,14 @@ public abstract  class BasePresenter<V extends BaseIView,M extends BaseModel> {
     }
 //    当页面销毁得时候，需要解除view得关联
     public void ditcahView(){
+
         iView = null;
+        iModel = null;
     }
 
     public abstract M setModel();
+
+
 
 
 }

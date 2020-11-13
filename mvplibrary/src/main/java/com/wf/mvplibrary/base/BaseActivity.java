@@ -33,11 +33,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     public void initPs(){
 //通过反射获取泛型对象，并直接转成Class对象                               获取实体对象得携带参数       获取携带参数化类型得实际类型。得到class
         Class<T> clazz = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-        Log.e("TAG","当前type类型：");
         try {
 //         通过反射得形式，直接创建对象
             presenter =    clazz.newInstance();
-            Log.e("TAG","当前type类型："+presenter.getClass().getName());
             presenter.initViewModel(this);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
@@ -47,6 +45,10 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.ditcahView();
 
-
+    }
 }

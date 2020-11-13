@@ -76,7 +76,7 @@ public class RegiestBean {
 
             private String uid;
             private String username;
-            private Object nickname;
+            private String nickname;
             private int gender;
             private String avatar;
             private int birthday;
@@ -97,11 +97,11 @@ public class RegiestBean {
                 this.username = username;
             }
 
-            public Object getNickname() {
+            public String getNickname() {
                 return nickname;
             }
 
-            public void setNickname(Object nickname) {
+            public void setNickname(String nickname) {
                 this.nickname = nickname;
             }
 

@@ -241,7 +241,6 @@ public class RetrofitUtils implements INetUtils {
         if (null == map){
             map = new HashMap<>();
         }
-
         myApiService.getPostFromData(url,generateRequestBody(map))
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
