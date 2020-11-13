@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".login.view.LoginActivity"></activity>
+
+        <activity android:name=".home.view.MainActivity"/>
+
         <!-- <activity android:name=".login.view.RegiestActivity"></activity> -->
         <activity
             android:name=".login.view.RegiestActivity"

@@ -45,6 +45,16 @@ public class RegiestBean {
          * userInfo : {"uid":"ee997583-7836-44b7-a1e3-dfa9c5f9c2f7","username":"shouyiren1","nickname":null,"gender":0,"avatar":"","birthday":0}
          */
 
+        private int code;
+
+        public int getCode() {
+            return code;
+        }
+
+        public void setCode(int code) {
+            this.code = code;
+        }
+
         private String token;
         private UserInfoBean userInfo;
 
