@@ -31,6 +31,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
 
     public void initPs(){
+
 //通过反射获取泛型对象，并直接转成Class对象                               获取实体对象得携带参数       获取携带参数化类型得实际类型。得到class
         Class<T> clazz = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         try {
