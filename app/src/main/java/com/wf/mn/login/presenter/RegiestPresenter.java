@@ -36,14 +36,17 @@ public class RegiestPresenter extends BasePresenter<RegiestContract.IRegiestView
             public void onSuccess(RegiestBean s) {
                 if(s.getErrno()==0){
                     iView.regiestSeccess(s);
+
+                    MMKV mmkv = MMKV.defaultMMKV();
+                    mmkv.encode("token",s.getData().getToken());
+                    mmkv.encode("uid",s.getData().getUserInfo().getUid());
+                    mmkv.encode("username",s.getData().getUserInfo().getUsername());
+                    mmkv.encode("nickname",s.getData().getUserInfo().getNickname());
+
                 }else {
                     iView.showErrorMessage(s.getErrmsg());
                 }
-                MMKV mmkv = MMKV.defaultMMKV();
-                mmkv.encode("token",s.getData().getToken());
-                mmkv.encode("uid",s.getData().getUserInfo().getUid());
-                mmkv.encode("username",s.getData().getUserInfo().getUsername());
-                mmkv.encode("nickname",s.getData().getUserInfo().getNickname());
+
 
 //                保存信息。跳转首页
 //                  跳转

@@ -24,10 +24,10 @@
 
         <activity android:name=".home.view.MainActivity"/>
 -->
-
-        <activity android:name=".login.view.RegiestActivity"></activity>
+<!--
+        <activity android:name=".login.view.RegiestActivity"></activity>-->
         <activity
-            android:name=".home.view.MainActivity"
+            android:name=".login.view.RegiestActivity"
             tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
